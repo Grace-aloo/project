@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded",() => {
         
     })
     home.addEventListener('click', () => {
-        
+
     })
     login.addEventListener('click',() => {
         home.style.display = "none";
@@ -36,9 +36,41 @@ document.addEventListener("DOMContentLoaded",() => {
 
         info.appendChild(head)
         info.append(paragraph)
-        const me = document.getElementById("wee")
+        const me = document.getElementById("info")
         me.append(info)
         return me;
+    }
+    function getPollutants(myData){
+        const meData = myData.pollutants
+        const one = document.createElement('div')
+        one.innerHTML = `<h3>${meData.co.full_name}</h3>
+        <h4>Concentration</h4> ${meData.co.concentration.value}${meData.co.concentration.units}
+        <h4>AQI</h4> ${meData.co.aqi_information.baqi.aqi_display}
+        <h4>Category</h4> ${meData.co.aqi_information.baqi.category}
+        <h4>Sources</h4> ${meData.co.sources_and_effects.sources}
+        <h4>Effects</h4> ${meData.co.sources_and_effects.effects}`
+
+        const two = document.createElement('div')
+        two.innerHTML =  `<h3>${meData.no2.full_name}</h3>
+        <h4>Concentration</h4> ${meData.no2.concentration.value}${meData.co.concentration.units}
+        <h4>AQI</h4> ${meData.no2.aqi_information.baqi.aqi_display}
+        <h4>Category</h4> ${meData.no2.aqi_information.baqi.category}
+        <h4>Sources</h4> ${meData.no2.sources_and_effects.sources}
+        <h4>Effects</h4> ${meData.no2.sources_and_effects.effects}`
+        
+        const three = document.createElement('div')
+        three.innerHTML =  `<h3>${meData.pm10.full_name}</h3>
+        <h4>Concentration</h4> ${meData.pm10.concentration.value}${meData.co.concentration.units}
+        <h4>AQI</h4> ${meData.pm10.aqi_information.baqi.aqi_display}
+        <h4>Category</h4> ${meData.pm10.aqi_information.baqi.category}
+        <h4>Sources</h4> ${meData.pm10.sources_and_effects.sources}
+        <h4>Effects</h4> ${meData.pm10.sources_and_effects.effects}`
+
+        const ten = document.getElementById('pollutants')
+        ten.append(one)
+        ten.append(two)
+        ten.append(three)
+
     }
     const getData = () => {
         fetch(data)
@@ -47,6 +79,7 @@ document.addEventListener("DOMContentLoaded",() => {
             let myData = data.data
             console.log(myData)
             getTime(myData)
+            getPollutants(myData)
         })
     }
     getData()
