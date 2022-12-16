@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded",() => {
 
         infom.appendChild(head)
         infom.append(paragraph)
-        const me = document.getElementById("wee")
+        const me = document.getElementById("wewe")
         me.append(infom)
         return me;
     }
@@ -60,12 +60,12 @@ document.addEventListener("DOMContentLoaded",() => {
         <b>Effects</b><br> ${meData.no2.sources_and_effects.effects}`
         
         const three = document.createElement('div')
-        three.innerHTML =  `<h3>${meData.pm10.full_name}</h3>
-        <b>Concentration</b>: ${meData.pm10.concentration.value}${meData.co.concentration.units}<br>
-        <b>AQI</b>: ${meData.pm10.aqi_information.baqi.aqi_display}<br>
-        <b>Category</b>: ${meData.pm10.aqi_information.baqi.category}<br>
-        <b>Sources</b> <br>${meData.pm10.sources_and_effects.sources}<br>
-        <b>Effects</b><br>${meData.pm10.sources_and_effects.effects}`
+        three.innerHTML =  `<h3>${meData.o3.full_name}</h3>
+        <b>Concentration</b>: ${meData.o3.concentration.value}${meData.co.concentration.units}<br>
+        <b>AQI</b>: ${meData.o3.aqi_information.baqi.aqi_display}<br>
+        <b>Category</b>: ${meData.o3.aqi_information.baqi.category}<br>
+        <b>Sources</b> <br>${meData.o3.sources_and_effects.sources}<br>
+        <b>Effects</b><br>${meData.o3.sources_and_effects.effects}`
 
         const ten = document.getElementById('pollutants')
         ten.append(one)
