@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded",() => {
 
         const paragraph = document.createElement('p')
         paragraph.innerHTML = `<b>Date and time</b> ${myData.datetime}.<br>
-        <b>index</b> :${myData.indexes.baqi.display_name}<br>
-        <b>AQI</b> :${myData.indexes.baqi.aqi_display}<br>
+        <b>index</b>: ${myData.indexes.baqi.display_name}<br>
+        <b>AQI</b>: ${myData.indexes.baqi.aqi_display}<br>
         <b>dominant pollutant</b> : ${myData.indexes.baqi.dominant_pollutant}<br>
         <b>Air quality category</b> : ${myData.indexes.baqi.category}`
 
@@ -45,27 +45,27 @@ document.addEventListener("DOMContentLoaded",() => {
         const meData = myData.pollutants
         const one = document.createElement('div')
         one.innerHTML = `<h3>${meData.co.full_name}</h3>
-        <h4>Concentration</h4> ${meData.co.concentration.value}${meData.co.concentration.units}
-        <h4>AQI</h4> ${meData.co.aqi_information.baqi.aqi_display}
-        <h4>Category</h4> ${meData.co.aqi_information.baqi.category}
-        <h4>Sources</h4> ${meData.co.sources_and_effects.sources}
-        <h4>Effects</h4> ${meData.co.sources_and_effects.effects}`
+        <b>Concentration</b> ${meData.co.concentration.value}${meData.co.concentration.units}<br>
+        <b>AQI</b> ${meData.co.aqi_information.baqi.aqi_display}<br>
+        <b>Category</b> ${meData.co.aqi_information.baqi.category}<br>
+        <b>Sources</b><br>${meData.co.sources_and_effects.sources}<br>
+        <b>Effects</b><br> ${meData.co.sources_and_effects.effects}`
 
         const two = document.createElement('div')
         two.innerHTML =  `<h3>${meData.no2.full_name}</h3>
-        <h4>Concentration</h4> ${meData.no2.concentration.value}${meData.co.concentration.units}
-        <h4>AQI</h4> ${meData.no2.aqi_information.baqi.aqi_display}
-        <h4>Category</h4> ${meData.no2.aqi_information.baqi.category}
-        <h4>Sources</h4> ${meData.no2.sources_and_effects.sources}
-        <h4>Effects</h4> ${meData.no2.sources_and_effects.effects}`
+        <b>Concentration</b>: ${meData.no2.concentration.value}${meData.co.concentration.units}<br>
+        <b>AQI</b>: ${meData.no2.aqi_information.baqi.aqi_display}<br>
+        <b>Category</b>: ${meData.no2.aqi_information.baqi.category}<br>
+        <b>Sources</b><br> ${meData.no2.sources_and_effects.sources}<br>
+        <b>Effects</b><br> ${meData.no2.sources_and_effects.effects}`
         
         const three = document.createElement('div')
         three.innerHTML =  `<h3>${meData.pm10.full_name}</h3>
-        <h4>Concentration</h4> ${meData.pm10.concentration.value}${meData.co.concentration.units}
-        <h4>AQI</h4> ${meData.pm10.aqi_information.baqi.aqi_display}
-        <h4>Category</h4> ${meData.pm10.aqi_information.baqi.category}
-        <h4>Sources</h4> ${meData.pm10.sources_and_effects.sources}
-        <h4>Effects</h4> ${meData.pm10.sources_and_effects.effects}`
+        <b>Concentration</b>: ${meData.pm10.concentration.value}${meData.co.concentration.units}<br>
+        <b>AQI</b>: ${meData.pm10.aqi_information.baqi.aqi_display}<br>
+        <b>Category</b>: ${meData.pm10.aqi_information.baqi.category}<br>
+        <b>Sources</b> <br>${meData.pm10.sources_and_effects.sources}<br>
+        <b>Effects</b><br>${meData.pm10.sources_and_effects.effects}`
 
         const ten = document.getElementById('pollutants')
         ten.append(one)
