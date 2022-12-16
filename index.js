@@ -22,22 +22,23 @@ document.addEventListener("DOMContentLoaded",() => {
 
     })
     function getTime(myData){
-        const info = document.createElement('div')
+        const infom = document.createElement('div')
+        infom.classList.add('card-container')
 
         const head =document.createElement('h3')
         head.innerHTML = 'The Air quality'
 
         const paragraph = document.createElement('p')
-        paragraph.innerHTML = `The date is ${myData.datetime}.
-        The index used is ${myData.indexes.baqi.display_name}
-        with a aqi of ${myData.indexes.baqi.aqi_display}.
-        the dominant pollutant is ${myData.indexes.baqi.dominant_pollutant}.
-        The air quality can be categozied as : ${myData.indexes.baqi.category}`
+        paragraph.innerHTML = `<b>Date and time</b> ${myData.datetime}.<br>
+        <b>index</b> :${myData.indexes.baqi.display_name}<br>
+        <b>AQI</b> :${myData.indexes.baqi.aqi_display}<br>
+        <b>dominant pollutant</b> : ${myData.indexes.baqi.dominant_pollutant}<br>
+        <b>Air quality category</b> : ${myData.indexes.baqi.category}`
 
-        info.appendChild(head)
-        info.append(paragraph)
-        const me = document.getElementById("info")
-        me.append(info)
+        infom.appendChild(head)
+        infom.append(paragraph)
+        const me = document.getElementById("wee")
+        me.append(infom)
         return me;
     }
     function getPollutants(myData){
