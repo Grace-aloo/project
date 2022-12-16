@@ -5,14 +5,16 @@ document.addEventListener("DOMContentLoaded",() => {
     const home = document.getElementById('home');
     const header = document.getElementById('header');
     const footer = document.getElementById('footer');
+    const homebtn = document.getElementById('homee')
 
     form.addEventListener('submit',(e) => {
         e.preventDefault();
         form.reset();
         
     })
-    home.addEventListener('click', () => {
-
+    homebtn.addEventListener('click', () => {
+       //form.style.display = 'none'
+       //home.style.display = ''
     })
     login.addEventListener('click',() => {
         home.style.display = "none";
@@ -68,11 +70,45 @@ document.addEventListener("DOMContentLoaded",() => {
         <b>Effects</b><br>${meData.o3.sources_and_effects.effects}`
 
         const ten = document.getElementById('pollutants')
-        ten.append(one)
-        ten.append(two)
-        ten.append(three)
+        ten.append(one);
+        ten.append(two);
+        ten.append(three);
+        return ten;
 
     }
+    function getRecommendation(myData){
+        const weData = myData.health_recommendations
+        const one = document.createElement('div')
+        one.innerHTML = `<h3>General Population</h3>${weData.general_population}`
+
+        const two = document.createElement('div')
+        two.innerHTML = `<h3>Elderly</h3>${weData.elderly}`
+
+        const three = document.createElement('div')
+        three.innerHTML = `<h3>Lung Diseases</h3>${weData.lung_diseases}`
+
+        const four = document.createElement('div')
+        four.innerHTML = `<h3>Heart Diseases</h3>${weData.heart_diseases}`
+
+        const five = document.createElement('div')
+        five.innerHTML = `<h3>Active</h3>${weData.active}`
+
+        const six = document.createElement('div')
+        six.innerHTML = `<h3>Pregnant Women</h3>${weData.pregnant_women}`
+
+        const seven = document.createElement('div')
+        seven.innerHTML = `<h3>Children</h3>${weData.children}`
+
+        const rec = document.getElementById('recommend')
+        rec.append(one)
+        rec.append(two)
+        rec.append(three)
+        rec.append(four)
+        rec.append(five)
+        rec.append(six)
+        rec.append(seven)
+    }
+
     const getData = () => {
         fetch(data)
         .then(res => res.json())
@@ -81,6 +117,7 @@ document.addEventListener("DOMContentLoaded",() => {
             console.log(myData)
             getTime(myData)
             getPollutants(myData)
+            getRecommendation(myData)
         })
     }
     getData()

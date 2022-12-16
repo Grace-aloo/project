@@ -179,9 +179,12 @@ nav{
     display: flex;
     border: none;
 }
-/* .right{
-    width:75%;
-} */
+.right{
+    width:25%;
+}
+.middle{
+    width: 50%;
+}
 #wewe {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -194,7 +197,7 @@ nav{
 .card-container {
     padding: 2px 16px;
     
-}
+} 
 img{
     width: 100%;
 }
