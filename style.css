@@ -86,7 +86,8 @@ button:hover{
 body{
     font-family:'Times New Roman', Times, serif;
     /* overflow: hidden; */
-    height:100vh ;
+    min-height: 100%;
+    
 }
 form .txt_field{
     position: relative;
@@ -127,6 +128,8 @@ nav{
 }
 
 .main-footer{
+    
+    width: 100%;
     bottom: 0;
     background: rgb(38, 180, 38);
     color: white;
@@ -166,20 +169,24 @@ nav{
 }
 .column{
     float:left;
+    border: none;
 }
 .left{
     width: 25%;
+    border: none;
 }
-/* .row{
+.row{
     display: flex;
-} */
+    border: none;
+}
 /* .right{
     width:75%;
 } */
 #wewe {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    border-radius: 5px; /* 5px rounded corners */
+    border-radius: 5px;
+    border: none;
 }
  .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
