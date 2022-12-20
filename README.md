@@ -1,5 +1,5 @@
 #  WE CARE
-This is a site that shows the air quality of Nairobi. It gives us recommendations of how we should protect ourselves with te 
+This is a site that shows the air quality of Nairobi. It gives us recommendations of how we should protect ourselves with the 
 current air pollution. It also gives the amount of air polution around.
 ## Description
 The site has a dummy sign up set up. upon pressing the sign up link, you'll be taken to the page where you would enter your details.
