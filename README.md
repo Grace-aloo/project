@@ -2,7 +2,7 @@
 This is a site that shows the air quality of Nairobi. It gives us recommendations of how we should protect ourselves with the 
 current air pollution. It also gives the amount of air polution around.
 ## Description
-The site has a dummy sign up set up. upon pressing the sign up link, you'll be taken to the page where you would enter your details.
+The site has a dummy sign up set up. upon pressing the sign up link, you'll be taken to the page where you would enter your details. You can also add your recommendations on the comment section at the end of the page. When you press the home button you will be redirected to the home page if you are at the sign up page 
 
 ## Installation
 ### Requirements
