@@ -203,11 +203,17 @@ img{
 }
 #comment-box, #post {
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 #post:hover{
     background-color: rgb(20, 255, 20);
 }
-
+#post{
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 5px;
+}
 
 

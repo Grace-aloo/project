@@ -6,6 +6,18 @@ document.addEventListener("DOMContentLoaded",() => {
     const header = document.getElementById('header');
     const footer = document.getElementById('footer');
     const homebtn = document.getElementById('homee')
+    const post= document.getElementById("post");
+    post.addEventListener("click", function(){
+        const commentBoxValue= document.getElementById("comment-box").value;
+     
+        const li = document.createElement("li");
+        const text = document.createTextNode(commentBoxValue);
+        li.appendChild(text);
+        document.getElementById("unordered").appendChild(li);
+     
+    });
+
+
 
     form.addEventListener('submit',(e) => {
         e.preventDefault();
@@ -13,8 +25,9 @@ document.addEventListener("DOMContentLoaded",() => {
         
     })
     homebtn.addEventListener('click', () => {
-       //form.style.display = 'none'
-       //home.style.display = ''
+       form.style.display = 'none'
+       home.style.display = ''
+       footer.style.display = ''
     })
     login.addEventListener('click',() => {
         home.style.display = "none";
