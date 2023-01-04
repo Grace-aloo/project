@@ -201,9 +201,12 @@ nav{
 img{
     width: 100%;
 }
-#comment-box, #post {
+#comment-box{
     border: none;
     border-radius: 10px;
+    width: 40%;
+    padding: 12px 20px;
+    box-sizing: border-box;
 }
 #post:hover{
     background-color: rgb(20, 255, 20);

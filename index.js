@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded",() => {
     const footer = document.getElementById('footer');
     const homebtn = document.getElementById('homee')
     const post= document.getElementById("post");
+
+    //for the comment section
     post.addEventListener("click", function(){
         const commentBoxValue= document.getElementById("comment-box").value;
      
@@ -18,12 +20,13 @@ document.addEventListener("DOMContentLoaded",() => {
     });
 
 
-
+    //for the login page
     form.addEventListener('submit',(e) => {
         e.preventDefault();
         form.reset();
         
     })
+    //for the home button
     homebtn.addEventListener('click', () => {
        form.style.display = 'none'
        home.style.display = ''
