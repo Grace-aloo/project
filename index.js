@@ -1,4 +1,4 @@
-const data = 'https://api.breezometer.com/air-quality/v2/current-conditions?lat=-1.292066&lon=36.821945&key=1005c63481784761ad527957bb065629&features=breezometer_aqi,local_aqi,health_recommendations,sources_and_effects,pollutants_concentrations,pollutants_aqi_information'
+const data = "https://grace-aloo.github.io/db/project.json"
 document.addEventListener("DOMContentLoaded",() => {
     const login = document.getElementById('login');
     const form = document.getElementById('formDiv');

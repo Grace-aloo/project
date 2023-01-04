@@ -201,6 +201,13 @@ nav{
 img{
     width: 100%;
 }
+#comment-box, #post {
+    border: none;
+    border-radius: 5px;
+}
+#post:hover{
+    background-color: rgb(20, 255, 20);
+}
 
 
 
