@@ -123,8 +123,8 @@ nav{
     margin: 0;
     font-size: 2em;
     color: white;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    font-family:"Sofia",sans-serif;
+    font-style: oblique;
 }
 
 .main-footer{
